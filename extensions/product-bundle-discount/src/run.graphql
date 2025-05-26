@@ -1,0 +1,20 @@
+query CartQuery {
+  cart {
+    lines {
+      id
+      quantity
+      cost {
+        amountPerQuantity {
+          amount
+          currencyCode
+        }
+      }
+      bundleRule: attribute(key: "_bundle_rule") {
+        value
+      }
+      bundleGroupId: attribute(key: "_bundle_group_id") {
+        value
+      }
+    }
+  }
+}
